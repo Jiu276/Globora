@@ -226,104 +226,9 @@
                     <h2>Latest Articles</h2>
                     <div class="divider"></div>
                 </div>
-                <div class="posts-grid">
-                    <article class="post-card featured" onclick="window.location.href='articles/mansur-gavriel-bags-guide-2025.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/bag.png" alt="Mansur Gavriel designer bags">
-                        </div>
-                        <div class="post-content">
-                            <h3>The Iconic Water Bucket Bag & Timeless Totes</h3>
-                            <p>Discover the elegance of Mansur Gavriel's iconic bucket bags and timeless totes. Explore the brand's minimalist design philosophy and why these bags have become modern classics...</p>
-                            <div class="post-meta">
-                                <span class="date">September 15, 2025</span>
-                                <span class="category">Fashion & Beauty</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="post-card" onclick="window.location.href='articles/fashion-style-guide-2025.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/fashion-style.jpg" alt="Fashion clothing coordination">
-                        </div>
-                        <div class="post-content">
-                            <h3>2025 Fall-Winter Fashion Guide: Creating Your Personal Style</h3>
-                            <p>The fall-winter season is approaching, and it's time to update your wardrobe. This styling guide includes color coordination theory, body optimization techniques, and the latest trend analysis...</p>
-                            <div class="post-meta">
-                                <span class="date">August 12, 2025</span>
-                                <span class="category">Fashion & Beauty</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="post-card" onclick="window.location.href='articles/digital-life-management-2025.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/digital-tools.jpg" alt="Digital office tools">
-                        </div>
-                        <div class="post-content">
-                            <h3>Digital Life Management: Making Technology Work for You</h3>
-                            <p>In the digital age, proper use of various tools and applications can greatly improve life efficiency. From time management to financial planning, from health monitoring to learning progress...</p>
-                            <div class="post-meta">
-                                <span class="date">July 25, 2025</span>
-                                <span class="category">Technology & Digital</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="post-card" onclick="window.location.href='articles/home-fitness-guide-2025.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/fitness-equipment.jpg" alt="Home fitness equipment">
-                        </div>
-                        <div class="post-content">
-                            <h3>Complete Home Fitness Guide: Creating Scientific Exercise Plans</h3>
-                            <p>No need for expensive gym memberships - you can enjoy professional-level workout experiences at home. This article provides complete home fitness solutions, including equipment recommendations and training plans...</p>
-                            <div class="post-meta">
-                                <span class="date">June 8, 2025</span>
-                                <span class="category">Health & Fitness</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="post-card" onclick="window.location.href='articles/gourmet-cooking-guide-2025.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/kitchen-appliances.jpg" alt="Gourmet cuisine preparation">
-                        </div>
-                        <div class="post-content">
-                            <h3>10 Secrets to Creating Michelin-Level Cuisine at Home</h3>
-                            <p>Want to create restaurant-quality cuisine at home? From ingredient selection to cooking techniques, from plating artistry to flavor pairing, these professional skills will help you elevate your culinary level...</p>
-                            <div class="post-meta">
-                                <span class="date">May 18, 2025</span>
-                                <span class="category">Food & Lifestyle</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="post-card" onclick="window.location.href='articles/eco-lifestyle-guide-2025.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/eco-lifestyle.jpg" alt="Eco-friendly lifestyle products">
-                        </div>
-                        <div class="post-content">
-                            <h3>Eco-Friendly Living Guide: Protecting the Planet Through Small Actions</h3>
-                            <p>Environmental protection is not only a responsibility, but also a lifestyle attitude. This article shares 25 practical eco-friendly living tips, including reducing plastic use, choosing sustainable products, energy conservation methods...</p>
-                            <div class="post-meta">
-                                <span class="date">April 22, 2025</span>
-                                <span class="category">Lifestyle Guide</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="post-card" onclick="window.location.href='articles/ai-tools-recommendation-2024.html'">
-                        <div class="post-image">
-                            <img src="assets/images/articles/ai-tools.jpg" alt="Artificial intelligence technology applications">
-                        </div>
-                        <div class="post-content">
-                            <h3>Top AI Tools Worth Following in 2025: Enhancing Life Efficiency</h3>
-                            <p>The rapid development of artificial intelligence technology has brought many conveniences to our daily lives. From ChatGPT to Midjourney, from voice assistants to smart translation, this article will recommend 15 practical AI tools to help you improve efficiency in work, study, and creativity. We will detail each tool's features, usage scenarios, and practical experience...</p>
-                            <div class="post-meta">
-                                <span class="date">March 20, 2025</span>
-                                <span class="category">Technology & Digital</span>
-                            </div>
-                        </div>
-                    </article>
+                <!-- Dynamic content loaded by JavaScript -->
+                <div class="posts-grid" id="latest-articles-grid">
+                    <!-- Articles will be loaded here automatically sorted by date -->
                 </div>
                 
                 <div class="pagination">
@@ -528,6 +433,14 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="assets/js/articles-data.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        // Load latest articles automatically sorted by date
+        document.addEventListener('DOMContentLoaded', function() {
+            const latestArticles = ArticlesManager.getRecent(7);
+            ArticlesManager.renderToContainer('latest-articles-grid', latestArticles);
+        });
+    </script>
 </body>
 </html>
