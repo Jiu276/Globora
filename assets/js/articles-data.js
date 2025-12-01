@@ -1,6 +1,34 @@
 // Articles data - all article metadata in one place
 const articlesData = [
     {
+        id: 'stitch-fix-whole-family-2025',
+        title: 'Stitch Fix for Women, Men & Kids – The Whole Family',
+        slug: 'stitch-fix-whole-family-2025.html',
+        excerpt: 'Discover how Stitch Fix serves the entire family with personalized styling for women, men, and kids. Get curated clothing for everyone in your household with one convenient service.',
+        category: 'Fashion & Beauty',
+        categorySlug: 'beauty',
+        date: '2025-11-15',
+        readTime: 16,
+        image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&h=600&fit=crop',
+        author: 'Globora Fashion Team',
+        featured: true,
+        views: '2.1k'
+    },
+    {
+        id: 'stitch-fix-free-try-on-2025',
+        title: 'Free Try-On for Your First Fix – Keep What You Love',
+        slug: 'stitch-fix-free-try-on-2025.html',
+        excerpt: 'Discover Stitch Fix\'s free try-on service for your first Fix! Try on curated clothing at home, keep only what you love, and return the rest for free. No subscription required for your first Fix.',
+        category: 'Fashion & Beauty',
+        categorySlug: 'beauty',
+        date: '2025-10-03',
+        readTime: 14,
+        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop',
+        author: 'Globora Fashion Team',
+        featured: true,
+        views: '1.8k'
+    },
+    {
         id: 'thredup-first-haul-guide-2025',
         title: 'Your First ThredUP Haul Awaits - Half Off!',
         slug: 'thredup-first-haul-guide-2025.html',
