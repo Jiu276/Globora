@@ -7,7 +7,7 @@ const articlesData = [
         excerpt: 'A week on the Ligurian coast taught me what mid-season dressing actually needs—and why MC2 Saint Barth jackets and overshirts earned a permanent spot in my carry-on.',
         category: 'Fashion & Beauty',
         categorySlug: 'beauty',
-        date: '2026-09-08',
+        date: '2026-05-10',
         readTime: 9,
         image: 'assets/images/articles/mc2-hero-italy.jpg',
         author: 'Globora Fashion Team',
