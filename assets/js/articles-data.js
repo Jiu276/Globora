@@ -1,6 +1,20 @@
 // Articles data - all article metadata in one place
 const articlesData = [
     {
+        id: 'mc2-saint-barth-jackets-overshirts-2026',
+        title: 'Explore MC2 Saint Barth\'s Pre-Fall Mid-Season Jackets & Overshirts',
+        slug: 'mc2-saint-barth-jackets-overshirts-2026.html',
+        excerpt: 'A week on the Ligurian coast taught me what mid-season dressing actually needs—and why MC2 Saint Barth jackets and overshirts earned a permanent spot in my carry-on.',
+        category: 'Fashion & Beauty',
+        categorySlug: 'beauty',
+        date: '2026-09-08',
+        readTime: 9,
+        image: 'assets/images/articles/mc2-hero-italy.jpg',
+        author: 'Globora Fashion Team',
+        featured: true,
+        views: '1.4k'
+    },
+    {
         id: 'stitch-fix-whole-family-2025',
         title: 'Stitch Fix for Women, Men & Kids – The Whole Family',
         slug: 'stitch-fix-whole-family-2025.html',
