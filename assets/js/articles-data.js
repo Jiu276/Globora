@@ -2,12 +2,11 @@
 const articlesData = [
     {
         id: 'mc2-saint-barth-jackets-overshirts-2026',
-        title: 'Explore MC2 Saint Barth\'s Pre-Fall Mid-Season Jackets & Overshirts',
+        title: 'Scopri le giacche e le overshirt mid-season pre-fall di MC2 Saint Barth',
         slug: 'mc2-saint-barth-jackets-overshirts-2026.html',
-        excerpt: 'A week on the Ligurian coast taught me what mid-season dressing actually needs—and why MC2 Saint Barth jackets and overshirts earned a permanent spot in my carry-on.',
-        category: 'Fashion & Beauty',
+        excerpt: 'Una settimana sulla costa ligure mi ha insegnato cosa serve davvero nel mezzo stagione—e perché giacche e overshirt MC2 Saint Barth sono finite nel mio bagaglio a mano.',
+        category: 'Moda & Bellezza',
         categorySlug: 'beauty',
-        date: '2026-05-10',
         readTime: 9,
         image: 'assets/images/articles/mc2-hero-italy.jpg',
         author: 'Globora Fashion Team',
@@ -258,7 +257,11 @@ const articlesData = [
 const ArticlesManager = {
     // Get all articles sorted by date (newest first)
     getAllSorted: function() {
-        return [...articlesData].sort((a, b) => new Date(b.date) - new Date(a.date));
+        return [...articlesData].sort((a, b) => {
+            const dateA = a.date ? new Date(a.date).getTime() : 0;
+            const dateB = b.date ? new Date(b.date).getTime() : 0;
+            return dateB - dateA;
+        });
     },
 
     // Get articles by category
@@ -284,6 +287,7 @@ const ArticlesManager = {
 
     // Format date for display
     formatDate: function(dateString) {
+        if (!dateString) return '';
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return date.toLocaleDateString('en-US', options);
@@ -304,7 +308,7 @@ const ArticlesManager = {
                     <p>${article.excerpt}</p>
                     ${includeMeta ? `
                     <div class="post-meta">
-                        <span class="date">${this.formatDate(article.date)}</span>
+                        ${article.date ? `<span class="date">${this.formatDate(article.date)}</span>` : ''}
                         <span class="category">${article.category}</span>
                     </div>
                     ` : ''}
@@ -328,7 +332,7 @@ const ArticlesManager = {
                     <h3>${article.title}</h3>
                     <p>${article.excerpt}</p>
                     <div class="article-meta">
-                        <time datetime="${article.date}" class="date"><i class="fas fa-calendar"></i> ${this.formatDate(article.date)}</time>
+                        ${article.date ? `<time datetime="${article.date}" class="date"><i class="fas fa-calendar"></i> ${this.formatDate(article.date)}</time>` : ''}
                         <span class="read-time"><i class="fas fa-clock"></i> ${article.readTime} min read</span>
                         <span class="views"><i class="fas fa-eye"></i> ${article.views} views</span>
                     </div>
