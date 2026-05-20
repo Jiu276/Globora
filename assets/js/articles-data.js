@@ -10,8 +10,7 @@ const articlesData = [
         readTime: 9,
         image: 'assets/images/articles/mc2-hero-italy.jpg',
         author: 'Globora Fashion Team',
-        featured: true,
-        views: '1.4k'
+        featured: true
     },
     {
         id: 'stitch-fix-whole-family-2025',
@@ -334,7 +333,7 @@ const ArticlesManager = {
                     <div class="article-meta">
                         ${article.date ? `<time datetime="${article.date}" class="date"><i class="fas fa-calendar"></i> ${this.formatDate(article.date)}</time>` : ''}
                         <span class="read-time"><i class="fas fa-clock"></i> ${article.readTime} min read</span>
-                        <span class="views"><i class="fas fa-eye"></i> ${article.views} views</span>
+                        ${article.views ? `<span class="views"><i class="fas fa-eye"></i> ${article.views} views</span>` : ''}
                     </div>
                 </div>
             </article>
